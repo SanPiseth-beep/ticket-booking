@@ -2,7 +2,6 @@
 
 A modern React application for browsing and booking event tickets with a clean, responsive UI and dark mode support.
 
-![Event Ticket Booking App](https://via.placeholder.com/800x400?text=Ticket+Booking+App)
 
 ## Features
 
@@ -21,7 +20,7 @@ A modern React application for browsing and booking event tickets with a clean, 
 - Firebase Authentication
 - Firestore Database
 - Vite
-- CSS3 with CSS Variables for theming
+- CSS Variables for theming
 
 ## Project Structure
 
