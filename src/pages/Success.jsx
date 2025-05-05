@@ -51,10 +51,11 @@ const Success = () => {
       margin: '2.5rem auto',
       padding: '2rem',
       textAlign: 'center',
-      backgroundColor: 'var(--bg-card)',
       borderRadius: '1rem',
       boxShadow: '0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05)'
-    }}>
+    }}
+    className="success-container"
+    >
       <h1 style={{
         fontSize: '1.875rem',
         fontWeight: '800',

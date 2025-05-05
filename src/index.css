@@ -13,6 +13,7 @@
   --border-color: #e5e7eb;
   --border-dark: #374151;
   --error: #ef4444;
+  --success-color: #10B981;
 }
 
 * {
@@ -394,6 +395,39 @@ svg.large-icon {
 /* Mobile cart icon - only visible on mobile screens */
 .mobile-cart {
   display: block;
+}
+
+/* Profile Booking Card Styles */
+.booking-item {
+  transition: background-color 0.2s ease;
+}
+
+.dark .booking-item {
+  background-color: var(--bg-card-dark);
+  border-color: var(--border-dark);
+}
+
+/* Success Page Styles */
+.success-container {
+  transition: background-color 0.2s ease;
+}
+
+.dark .success-container {
+  background-color: var(--bg-card-dark);
+  border: 1px solid var(--border-dark);
+}
+
+/* Cart Item Styles */
+.cart-item {
+  transition: border-color 0.2s ease;
+}
+
+.dark .cart-item {
+  border-color: var(--border-dark);
+}
+
+.remove-button:hover {
+  opacity: 0.8;
 }
 
 /* Media Queries */

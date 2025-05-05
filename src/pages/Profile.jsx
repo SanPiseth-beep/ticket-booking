@@ -34,8 +34,9 @@ const Profile = () => {
                 border: '1px solid var(--border-color)', 
                 padding: '0.75rem', 
                 borderRadius: '0.375rem', 
-                backgroundColor: 'var(--bg-light)' 
+                boxShadow: '0 1px 2px rgba(0, 0, 0, 0.05)'
               }}
+              className="booking-item"
             >
               <p>
                 {booking.eventTitle} - {booking.date} - 

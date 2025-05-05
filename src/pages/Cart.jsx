@@ -23,8 +23,8 @@ const Cart = () => {
             alignItems: 'center', 
             marginBottom: '1.5rem', 
             paddingBottom: '1rem', 
-            borderBottom: '1px solid var(--border-color)' 
-          }}>
+          }}
+          className="cart-item">
             <div>
               <h2 style={{ fontSize: '1.125rem', fontWeight: '600', marginBottom: '0.5rem' }}>{item.title}</h2>
               <input
@@ -50,6 +50,7 @@ const Cart = () => {
                   cursor: 'pointer',
                   textDecoration: 'underline'
                 }}
+                className="remove-button"
               >
                 Remove
               </button>
