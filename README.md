@@ -1,70 +1,105 @@
-# Getting Started with Create React App
+# Ticket Booking Application
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A modern React application for browsing and booking event tickets with a clean, responsive UI and dark mode support.
 
-## Available Scripts
+![Event Ticket Booking App](https://via.placeholder.com/800x400?text=Ticket+Booking+App)
 
-In the project directory, you can run:
+## Features
 
-### `npm start`
+- **Event Browsing**: View a list of upcoming events with thumbnails, prices, and locations
+- **Event Details**: Get detailed information about each event
+- **Shopping Cart**: Add events to cart and manage quantity
+- **User Authentication**: Sign up and log in to manage your bookings
+- **Booking History**: View all your past bookings in your profile
+- **Responsive Design**: Works on desktop and mobile devices
+- **Dark Mode**: Toggle between light and dark themes
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Technologies Used
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+- React 19
+- React Router
+- Firebase Authentication
+- Firestore Database
+- Vite
+- CSS3 with CSS Variables for theming
 
-### `npm test`
+## Project Structure
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+```
+ticket-booking/
+├── public/
+│   ├── images/         # Event thumbnails and other images
+│   └── ...             # Public assets
+├── src/
+│   ├── components/     # Reusable UI components
+│   ├── contexts/       # React context providers
+│   ├── data/           # Static data (events)
+│   ├── pages/          # Main application pages
+│   └── ...             # App configuration files
+└── ...                 # Project configuration files
+```
 
-### `npm run build`
+## Getting Started
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### Prerequisites
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+- Node.js (v16 or higher)
+- npm or yarn
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### Installation
 
-### `npm run eject`
+1. Clone the repository:
+   ```bash
+   git clone <repository-url>
+   cd ticket-booking
+   ```
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+2. Install dependencies:
+   ```bash
+   npm install
+   # or
+   yarn
+   ```
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+3. Start the development server:
+   ```bash
+   npm run dev
+   # or
+   yarn dev
+   ```
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+4. Open [http://localhost:5173](http://localhost:5173) in your browser
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+## Development
 
-## Learn More
+### Available Scripts
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+- `npm run dev` - Start the development server
+- `npm run build` - Build the app for production
+- `npm run preview` - Preview the production build locally
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+### Adding New Events
 
-### Code Splitting
+1. Add the event image to `public/images/`
+2. Update the events array in `src/data/data.js` with the new event information
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+### Firebase Configuration
 
-### Analyzing the Bundle Size
+This project uses Firebase for authentication and data storage. To set up your own Firebase project:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+1. Create a new project in the [Firebase Console](https://console.firebase.google.com/)
+2. Enable Authentication with Email/Password
+3. Create a Firestore database
+4. Update the configuration in `src/firebase.js` with your own Firebase credentials
 
-### Making a Progressive Web App
+## Deployment
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+This app can be deployed to any static hosting service:
 
-### Advanced Configuration
+1. Build the application:
+   ```bash
+   npm run build
+   ```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+2. Deploy the contents of the `dist` folder to your hosting provider
 
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
