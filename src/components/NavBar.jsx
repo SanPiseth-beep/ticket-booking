@@ -131,7 +131,7 @@ const NavBar = () => {
           <button
             onClick={() => setIsMenuOpen(!isMenuOpen)}
             className="nav-menu-button"
-            aria-expanded="false"
+            aria-expanded={isMenuOpen}
           >
             {isMenuOpen ? (
               <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
@@ -195,29 +195,20 @@ const NavBar = () => {
             style={{ display: 'flex', justifyContent: 'space-between', width: '100%' }}
           >
             <span>Dark Mode</span>
-            <span style={{ 
-              display: 'inline-flex', 
-              alignItems: 'center', 
-              justifyContent: 'center',
-              width: '2.5rem',
-              height: '1.25rem',
-              borderRadius: '9999px',
-              backgroundColor: darkMode ? 'var(--border-dark)' : 'var(--border-color)'
-            }}>
-              <span
-                style={{
-                  width: '1rem',
-                  height: '1rem',
-                  borderRadius: '50%',
-                  backgroundColor: 'white',
-                  transform: darkMode ? 'translateX(0.5rem)' : 'translateX(-0.5rem)',
-                  transition: 'transform 0.2s'
-                }}
-              ></span>
-            </span>
+            <div className={`mobile-toggle-wrapper ${darkMode ? 'dark-mode' : ''}`}>
+              <div className={`mobile-toggle-button ${darkMode ? 'dark-mode' : ''}`}></div>
+            </div>
           </button>
         </div>
       </div>
+
+      <style jsx>{`
+        @media (max-width: 767px) {
+          .nav-links {
+            display: none !important;
+          }
+        }
+      `}</style>
     </nav>
   );
 };

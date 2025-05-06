@@ -102,3 +102,5 @@ This app can be deployed to any static hosting service:
 
 2. Deploy the contents of the `dist` folder to your hosting provider
 
+## video 
+A video explaining the project can be found here: [Ticket Booking Application Video](https://youtu.be/Cusb5apyNxE)

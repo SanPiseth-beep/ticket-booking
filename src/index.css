@@ -14,6 +14,10 @@
   --border-dark: #374151;
   --error: #ef4444;
   --success-color: #10B981;
+  --toggle-bg-light: #e5e7eb;
+  --toggle-bg-dark: #4b5563;
+  --toggle-switch-light: #ffffff;
+  --toggle-switch-dark: #d1d5db;
 }
 
 * {
@@ -296,6 +300,7 @@ body.dark {
   font-size: 1rem;
   font-weight: 500;
   color: var(--text-dark);
+  background-color: var(--bg-card-light);
   text-decoration: none;
   border-radius: 0.375rem;
 }
@@ -340,6 +345,89 @@ body.dark {
 .theme-toggle svg {
   width: 1.25rem;
   height: 1.25rem;
+}
+
+/* Toggle Switch Styles */
+.toggle-switch-wrapper {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.5rem;
+  height: 1.25rem;
+  border-radius: 9999px;
+  background-color: var(--toggle-bg-light);
+  transition: background-color 0.2s ease;
+  position: relative;
+}
+
+.toggle-switch-wrapper.dark-mode {
+  background-color: var(--toggle-bg-dark);
+}
+
+.dark .toggle-switch-wrapper {
+  background-color: var(--toggle-bg-dark);
+}
+
+.toggle-switch-button {
+  width: 1rem;
+  height: 1rem;
+  border-radius: 50%;
+  background-color: var(--toggle-switch-light);
+  transform: translateX(-0.5rem);
+  transition: transform 0.2s ease, background-color 0.2s ease;
+  position: absolute;
+}
+
+.toggle-switch-button.dark-mode {
+  transform: translateX(0.5rem);
+  background-color: var(--toggle-switch-dark);
+}
+
+.dark .toggle-switch-button {
+  transform: translateX(0.5rem);
+  background-color: var(--toggle-switch-dark);
+}
+
+/* Mobile toggle specific styles to avoid inheritance issues */
+.mobile-toggle-wrapper {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.5rem;
+  height: 1.25rem;
+  border-radius: 9999px;
+  background-color: var(--toggle-bg-light);
+  transition: background-color 0.2s ease;
+  position: relative;
+  margin-left: auto; /* Push to the right side */
+}
+
+.mobile-toggle-wrapper.dark-mode {
+  background-color: var(--toggle-bg-dark);
+}
+
+.dark .mobile-toggle-wrapper {
+  background-color: var(--toggle-bg-dark);
+}
+
+.mobile-toggle-button {
+  width: 1rem;
+  height: 1rem;
+  border-radius: 50%;
+  background-color: var(--toggle-switch-light);
+  transform: translateX(-0.5rem);
+  transition: transform 0.2s ease, background-color 0.2s ease;
+  position: absolute;
+}
+
+.mobile-toggle-button.dark-mode {
+  transform: translateX(0.5rem);
+  background-color: var(--toggle-switch-dark);
+}
+
+.dark .mobile-toggle-button {
+  transform: translateX(0.5rem);
+  background-color: var(--toggle-switch-dark);
 }
 
 /* Cart icon */

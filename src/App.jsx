@@ -11,6 +11,22 @@ import PrivateRoute from './components/PrivateRoute';
 import NavBar from './components/NavBar';
 import './index.css';
 
+/**
+ * App Component - The main application component
+ * 
+ * This component defines:
+ * 1. The application's navigation bar, shown on all pages
+ * 2. The routing structure with public and protected routes
+ * 
+ * Route Structure:
+ * - / (Home): Public route for browsing all events
+ * - /event/:eventId: Public route for viewing a specific event's details
+ * - /cart: Public route for viewing and managing the shopping cart
+ * - /success: Protected route for order confirmation (requires login)
+ * - /login: Public route for user authentication
+ * - /signup: Public route for new user registration
+ * - /profile: Protected route for viewing user's booking history (requires login)
+ */
 function App() {
   return (
     <div>
